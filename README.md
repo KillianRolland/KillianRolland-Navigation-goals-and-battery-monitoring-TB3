@@ -14,6 +14,8 @@ For these files, I modified the following things :
   - turtlebot3_teleop_key for having the instructions in french
   - automatic_parking_vision (the node) line 240, with that, the node kill itself after going to the base
 
+The turtle.sh is a bash file that I use for launching all I need (master, nodes on the RaspberryPi via ssh, transforms on the camera, Navigation stack and battery_monitoring). After that, I run the simple_navigation_goals to control the robot.
+
 Web_App his my current work, I am trying to replace the usage of the terminal by a graphical user interface using a Web application.
 For the moment, I followed the next tuto :https://medium.com/husarion-blog/bootstrap-4-ros-creating-a-web-ui-for-your-robot-9a77a8e373f9. With that I can control the TB3 with a Joystick and see the camera view.
 
