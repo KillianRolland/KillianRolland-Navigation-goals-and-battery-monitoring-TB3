@@ -1,4 +1,4 @@
-#KillianRolland-Navigation-goals-and-battery-monitoring-TB3
+# Navigation goals and battery monitoring with autonomous TB3
 
 These files are the files I use with ROS for my project around the TurtleBot3 (Waffle Pi).
 
