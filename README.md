@@ -2,7 +2,7 @@
 These files are the files I use with ROS for my project around the TurtleBot3 (Waffle Pi).
 
 battery_monitoring and simple_navigation_goals are the codes I created.
-The first is constantly watching the voltage of the battery and when this voltage is too low, the robot goes somewhere where he is supposed to be put on charge. The second one was inspired with this tutorial : http://wiki.ros.org/navigation/Tutorials/SendingSimpleGoals. 
+The first is constantly watching the voltage of the battery and when this voltage is too low, the robot goes somewhere where he is supposed to be plugged to its charger. The second one was inspired with this tutorial : http://wiki.ros.org/navigation/Tutorials/SendingSimpleGoals.
 
 It has a Menu that appears in the terminal for the user. You can check the voltage, send the robots to defined positions on the map, ask the robot to go back to his base or control it with the teleop node.
 
