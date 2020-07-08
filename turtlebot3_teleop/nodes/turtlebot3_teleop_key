@@ -51,13 +51,9 @@ Moving around:
         z
    q    s    d
         x
-
 z/x : augmenter/descendre la vitesse lineaire (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
 a/d : augmenter/descendre la vitesse angulaire (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
-
-
 espace ou s : stop
-
 CTRL-C pour quitter
 """
 
