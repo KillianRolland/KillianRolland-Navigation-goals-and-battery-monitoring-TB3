@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr+en">
+
+  <head>
+    <title>Application Web TurtleBot3</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <body class="bg-light">
+
+    <div id='main1'>
+    
+        <!--Battery Status-->
+        <div class="container">
+            <br>
+            <h5>Niveau de Batterie :</h5>
+            <div class="progress">
+            <div id="battery_status" class="progress-bar bg-success" style="width:50%" >50%</div>
+            <!-- <div class="progress-bar bg-danger" style="width:50%" id="battery-status">50%</div> -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- VIDEO -->
+    <br> 
+    <h5>&emsp;&emsp;&emsp;Caméra :</h5>
+    <div class="row my-4">
+        <div class="col d-flex justify-content-center">
+            <img src="" style="margin:auto;display:block" class="p-1 bg-dark" alt="" id="video" />
+        </div>
+    </div>
+
+
+    <div id='main2'>
+
+    <!-- Partie sous la caméra (boutons, info et bouton pour passer à l'autre vue) -->
+
+        <!-- Bouttons -->
+        <div class="row my-2">
+            <div class="col-md-0"></div>
+            <div class="col-md-0" style="margin:auto;display:block">
+            <!--  <button type="button" class="btn btn-success" id="connect-btn">Se connecter</button> -->
+                <br>
+                <button type="button" onclick="Salon()" class="btn btn-outline-primary" id="salon-btn">Salon</button>
+                <button type="button" onclick="Cuisine()" class="btn btn-outline-primary" id="cuisine-btn">Cuisine</button>
+            <!--  <button type="button" onclick="Tension()" class="btn btn-outline-warning" id="tension-btn">Tension de la batterie</button> -->
+                <button type="button" onclick="Dock()" class="btn btn-outline-primary" id="base-btn">Retour à la base</button>
+            <!--  <button type="button" class="btn btn-danger" id="disconnect-btn">Se déconnecter</button> -->
+                <br>
+            </div>
+            <div class="col-md-0"></div>
+        </div>
+
+        <!-- INFO -->
+
+        <div class="row my-4">
+            <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="alert alert-success">
+                        <h3 class="alert-heading">Informations :</h3>
+                        <h6 id="Message"></h6>
+                    </div>
+                </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row my-2">
+            <div class="col-md-0"></div>
+            <div class="col-md-0" style="margin:auto;display:block">
+                <button type="button"  onclick="Affichage_cam()" class="btn btn-outline-info" id="camera_joystick">Afficher la caméra et le Joystick</button>
+            </div>
+        <div class="col-md-0"></div>
+    </div>
+    </div>
+
+
+    <div id='cam'>
+        <!-- On a ici le joystick, une info le concernant, le bouton pour revenir au menu principal -->
+
+        <!-- JOYSTICK -->
+        <div class="row my-4">
+            <div class="col">
+                <div id="joystick" class="d-flex justify-content-center" style="width: 100px; height: 100px">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                </div>
+            </div>
+        </div>
+
+                <!-- INFO -->
+                <div class="row my-4">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="alert alert-success">
+                            <h3 class="alert-heading">Informations :</h3>
+                               <h6> Veuillez ne pas utiliser le joystick lorsque le robot se déplace d'un endroit à un autre</h6>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+        <div class="row my-2">
+            <div class="col-md-0"></div>
+            <div class="col-md-0" style="margin:auto;display:block">
+                <button type="button" class="btn btn-outline-info" onclick="Affichage_menu()" id="menu_principal">Afficher le menu principal</button>
+            </div>
+            <div class="col-md-0"></div>
+        </div>    
+    </div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+    <script src="https://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+    <script src="https://static.robotwebtools.org/keyboardteleopjs/current/keyboardteleop.min.js"></script>
+    <script src="//yoannmoinet.github.io/nipplejs/javascripts/nipplejs.js"></script>
+    <script src="webui.js"></script>
+
+
+</body>
+
+</html>
