@@ -235,7 +235,7 @@ class AutomaticParkingVision():
         self.fnTrackMarker(-desired_angle_turn)
         
         print self.marker_2d_pose_x
-        if abs(self.marker_2d_pose_x) < 0.22:
+        if abs(self.marker_2d_pose_x) < 0.25:
             self.fnStop()
             # Ajouté ici
 	    os.system("rosnode kill /ar_track_alvar")
